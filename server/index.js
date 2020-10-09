@@ -22,7 +22,7 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static("../weather_app"));
 // intialize the port
-const port=3000;
+const port=3000 || process.env.port;
 // Callback to debug
 app.listen(port,()=>{console.log("I am working on local host",port)});
 
